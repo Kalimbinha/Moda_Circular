@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Social Network</title>
+    <link rel="icon" href="../static/images/icon-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .settings-container {
+            max-width: 500px;
+            margin: 100px auto 0;
+            background: var(--card-background);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 2rem;
+        }
+        .settings-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .settings-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        .settings-form input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            background: var(--background-color);
+            color: var(--text-color);
+            margin-bottom: 1.2rem;
+            transition: var(--transition-normal);
+        }
+        .settings-form input:focus {
+            border-color: var(--primary-color);
+        }
+        .settings-form button {
+            background: var(--gradient-primary);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius-lg);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        .settings-form button:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="../index..html" class="brand">Social Network</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+            <div class="nav-menu">
+                <a href="../index..html" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                <a href="#" class="nav-link"><i class="fas fa-bell"></i> Notificações</a>
+                <a href="#" class="nav-link"><i class="fas fa-envelope"></i> Mensagens</a>
+                <a href="profile.html" class="nav-link">
+                    <img src="../static/images/OL.png" alt="Profile" class="profile-pic">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="settings-container">
+            <div class="settings-title">Configurações da Conta</div>
+            <form class="settings-form">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" value="Seu Nome">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="seu@email.com">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Nova senha">
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.settings-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Configurações salvas com sucesso!');
+        });
+        window.initSettingsPage = function() {
+            document.querySelector('.settings-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Configurações salvas com sucesso!');
+            });
+        };
+    </script>
+</body>
+</html> 

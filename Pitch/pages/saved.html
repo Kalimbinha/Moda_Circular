@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvos - Brechó Social</title>
+    <link rel="icon" href="../static/images/icon-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .saved-container { max-width: 1100px; margin: 100px auto 0; }
+        .saved-title { font-size: 1.7rem; color: var(--primary-color); margin-bottom: 2rem; font-weight: 700; }
+        .saved-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+        .saved-card { background: var(--card-background); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); padding: 1.2rem; display: flex; flex-direction: column; align-items: center; transition: var(--transition-normal); }
+        .saved-card img { width: 100%; max-width: 220px; height: 220px; object-fit: cover; border-radius: var(--border-radius-md); margin-bottom: 1rem; }
+        .saved-card h4 { margin: 0.5rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
+        .saved-card .price { color: var(--success-color); font-weight: 700; margin-bottom: 0.7rem; }
+        .remove-saved { background: var(--error-color); color: #fff; border: none; border-radius: 20px; padding: 0.5rem 1.2rem; cursor: pointer; font-size: 1rem; transition: var(--transition-normal); }
+        .remove-saved:hover { background: #b71c1c; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="../index..html" class="brand">Brechó Social</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar produtos, lojas...">
+            </div>
+            <div class="nav-menu">
+                <a href="../index..html" class="nav-link"><i class="fas fa-home"></i> Feed</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i> Perfil</a>
+                <a href="saved.html" class="nav-link active"><i class="fas fa-bookmark"></i> Salvos</a>
+                <a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Configurações</a>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="saved-container">
+            <div class="saved-title">Produtos Salvos</div>
+            <div class="saved-grid" id="savedGrid">
+                <!-- Produtos salvos serão carregados aqui -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Exemplo de produtos salvos
+        const savedProducts = [
+            { id: 1, name: 'Jaqueta Jeans Vintage', price: 'R$ 89,90', image: '../static/images/ok.jpg' },
+            { id: 2, name: 'Bolsa Retrô', price: 'R$ 49,00', image: '../static/images/A.png' },
+            { id: 3, name: 'Tênis Old School', price: 'R$ 120,00', image: '../static/images/OO.jpg' }
+        ];
+        function renderSaved() {
+            const grid = document.getElementById('savedGrid');
+            grid.innerHTML = savedProducts.map(prod => `
+                <div class="saved-card" data-id="${prod.id}">
+                    <img src="${prod.image}" alt="${prod.name}">
+                    <h4>${prod.name}</h4>
+                    <div class="price">${prod.price}</div>
+                    <button class="remove-saved">Remover</button>
+                </div>
+            `).join('');
+            document.querySelectorAll('.remove-saved').forEach(btn => {
+                btn.onclick = function() {
+                    const id = this.closest('.saved-card').dataset.id;
+                    const idx = savedProducts.findIndex(p => p.id == id);
+                    if(idx > -1) { savedProducts.splice(idx,1); renderSaved(); }
+                };
+            });
+        }
+        renderSaved();
+        window.initSavedPage = renderSaved;
+    </script>
+</body>
+</html> 

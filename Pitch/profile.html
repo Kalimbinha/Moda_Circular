@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Social Network</title>
+    <link rel="icon" href="../static/images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Social Network</h1>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Pesquisar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="profile-link">
+                    <img src="../static/images/OL.png" alt="Profile" class="profile-pic">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-cover">
+                <img src="../static/images/OO.jpg" alt="Cover Photo">
+                <button class="edit-cover"><i class="fas fa-camera"></i></button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="../static/images/OL.png" alt="Profile Picture">
+                    <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-details">
+                    <h1>Dodo</h1>
+                    <p class="username">@artistaisadora</p>
+                    <p class="bio">Desenho e Pintura</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="count">150</span>
+                            <span class="label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="count">1.2k</span>
+                            <span class="label">Seguidores</span>
+                        </div>
+                        <div class="stat">
+                            <span class="count">500</span>
+                            <span class="label">Seguindo</span>
+                        </div>
+                    </div>
+                    <button class="edit-profile-btn">Editar Perfil</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="posts">Posts</button>
+                <button class="tab-btn" data-tab="photos">Fotos</button>
+                <button class="tab-btn" data-tab="about">Sobre</button>
+            </div>
+
+            <div class="tab-content active" id="posts">
+                <div class="posts-grid">
+                    <!-- Posts will be loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="photos">
+                <div class="photos-grid">
+                    <img src="../static/images/ok.jpg" alt="Photo 1">
+                    <img src="../static/images/D.webp" alt="Photo 2">
+                    <img src="../static/images/=o" alt="Photo 3">
+                    <!-- More photos will be added dynamically -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="about">
+                <div class="about-section">
+                    <h3>Informações Pessoais</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, Brasil</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Desenho e Pintura</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Produção em Multimídia</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Namorando</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html> 

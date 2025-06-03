@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Social Network</title>
+    <link rel="icon" href="../static/images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Social Network</h1>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Pesquisar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-menu">
+                <a href="index..html"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../static/images/OL.png" alt="Profile" class="profile-pic">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h1>Galeria de Fotos</h1>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="nature">Natureza</button>
+                <button class="filter-btn" data-filter="city">Cidade</button>
+                <button class="filter-btn" data-filter="people">Pessoas</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="nature">
+                <img src="../static/images/ok.jpg" alt="Nature Photo">
+                <div class="gallery-item-overlay">
+                    <div class="gallery-item-info">
+                        <h3>Natureza</h3>
+                        <p>Foto tirada em um belo dia de sol</p>
+                        <div class="gallery-item-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> 42</button>
+                            <button class="comment-btn"><i class="far fa-comment"></i> 5</button>
+                            <button class="share-btn"><i class="far fa-share-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="city">
+                <img src="../static/images/D.webp" alt="City Photo">
+                <div class="gallery-item-overlay">
+                    <div class="gallery-item-info">
+                        <h3>Cidade</h3>
+                        <p>Vista panorâmica da cidade</p>
+                        <div class="gallery-item-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> 28</button>
+                            <button class="comment-btn"><i class="far fa-comment"></i> 3</button>
+                            <button class="share-btn"><i class="far fa-share-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="people">
+                <img src="../static/images/=o" alt="People Photo">
+                <div class="gallery-item-overlay">
+                    <div class="gallery-item-info">
+                        <h3>Pessoas</h3>
+                        <p>Momentos especiais com amigos</p>
+                        <div class="gallery-item-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> 56</button>
+                            <button class="comment-btn"><i class="far fa-comment"></i> 8</button>
+                            <button class="share-btn"><i class="far fa-share-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <h2>Compartilhe suas fotos</h2>
+            <div class="upload-area" id="uploadArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Arraste e solte suas fotos aqui ou</p>
+                <button class="upload-btn">Selecionar Arquivos</button>
+                <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/gallery.js"></script>
+</body>
+</html> 

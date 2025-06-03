@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Social Network</title>
+    <link rel="icon" href="../static/images/icon-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="../index..html" class="brand">Social Network</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+            <div class="nav-menu">
+                <a href="../index..html" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                <a href="#" class="nav-link"><i class="fas fa-bell"></i> Notificações</a>
+                <a href="#" class="nav-link"><i class="fas fa-envelope"></i> Mensagens</a>
+                <a href="profile.html" class="nav-link">
+                    <img src="../static/images/OL.png" alt="Profile" class="profile-pic">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="profile-container container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../static/images/OL.png" alt="Avatar" class="profile-pic">
+                </div>
+                <div class="profile-info">
+                    <h2>Dodo</h2>
+                    <span class="username">@artistaisadora</span>
+                    <p class="bio">Paia</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">1.2k</div>
+                            <div class="stat-label">Seguidores</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">500</div>
+                            <div class="stat-label">Seguindo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="posts">Posts</button>
+                <button class="tab-btn" data-tab="photos">Fotos</button>
+                <button class="tab-btn" data-tab="about">Sobre</button>
+            </div>
+            <div class="tab-content active" id="posts">
+                <div class="posts-grid">
+                    <!-- Posts do usuário serão carregados aqui -->
+                </div>
+            </div>
+            <div class="tab-content" id="photos">
+                <div class="photos-grid">
+                    <img src="../static/images/ok.jpg" alt="Photo 1">
+                    <img src="../static/images/D.webp" alt="Photo 2">
+                    <img src="../static/images/IO.jpg" alt="Photo 3">
+                </div>
+            </div>
+            <div class="tab-content" id="about">
+                <div class="about-section">
+                    <h3>Informações Pessoais</h3>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>São Paulo, Brasil</span></div>
+                    <div class="info-item"><i class="fas fa-briefcase"></i> <span>Artista</span></div>
+                    <div class="info-item"><i class="fas fa-graduation-cap"></i> <span>Produção em Multimídia</span></div>
+                    <div class="info-item"><i class="fas fa-heart"></i> <span>Namorando</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/profile.js"></script>
+</body>
+</html> 
