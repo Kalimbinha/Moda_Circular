@@ -60,7 +60,7 @@ function loadUserPosts() {
     postsGrid.innerHTML = userPosts.map(post => `
         <div class="post" data-post-id="${post.id}">
             <div class="post-header">
-                <img src="../static/images/OL.png" alt="Profile" class="profile-pic">
+                <img src="../static/images/Cara_Perfil.jpg" alt="Profile" class="profile-pic">
                 <div>
                     <h4>Nome do Usuário</h4>
                     <span class="timestamp">${post.timestamp}</span>

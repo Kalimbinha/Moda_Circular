@@ -11,7 +11,7 @@ const storiesContainer = document.querySelector('.stories');
 const stories = [
     {
         id: 1,
-        image: 'static/images/THE-KING.gif',
+        image: 'static/images/vid.mp4',
         title: 'Nova Coleção',
         views: 120,
         duration: 5000
@@ -45,12 +45,12 @@ const posts = [
         id: 1,
         user: {
             name: 'Brechó da Ana',
-            avatar: 'static/images/OL.png',
-            username: '@brechodadodo'
+            avatar: 'static/images/Ana.jpg',
+            username: '@brechodaAna'
         },
         content: 'Nova jaqueta jeans vintage disponível! Tamanho M. Aproveite! #brecho #moda #vintage',
-        image: 'static/images/ok.jpg',
-        price: 'R$ 89,90',
+        image: 'static/images/jaqueta.jpg',
+        price: 'R$ 59,90',
         size: 'M',
         likes: 42,
         comments: 5,
@@ -60,13 +60,13 @@ const posts = [
     {
         id: 2,
         user: {
-            name: 'Brechó da Ana',
-            avatar: 'static/images/OL.png',
-            username: '@brechodadodo'
+            name: 'Vic Chic',
+            avatar: 'static/images/Vic.jpg',
+            username: '@Vic_Chic'
         },
-        content: 'Tênis old school em promoção! Só hoje por R$ 120,00. #promoção #tenis',
-        image: 'static/images/OO.jpg',
-        price: 'R$ 120,00',
+        content: 'Tênis nike em promoção! Só hoje por R$ 80,00. #promoção #tenis',
+        image: 'static/images/tenis.jpg',
+        price: 'R$ 80,00',
         size: '40',
         likes: 28,
         comments: 3,
@@ -364,18 +364,34 @@ function loadMorePosts() {
         {
             id: posts.length + 1,
             user: {
-                name: 'Brechó da Ana',
-                avatar: 'static/images/OL.png',
-                username: '@brechodadodo'
+                name: 'brechó_jpeg',
+                avatar: 'static/images/Cara_Perfil.jpg',
+                username: '@brecho_jpeg'
             },
             content: 'Novo estoque chegou! Venha conferir as novidades. #brecho #novidades',
-            image: 'static/images/D.webp',
-            price: 'R$ 150,00',
-            size: 'G',
+            image: 'static/images/novidades.jpg',
+            price: 'R$ 0,00',
+            size: 'não informado',
             likes: 15,
             comments: 2,
             timestamp: '6h atrás',
             liked: false
+        },  
+        {
+            id: posts.length + 2,
+            user: {
+                name: 'Brechó da Ana',
+            avatar: 'static/images/Ana.jpg',
+            username: '@brechodaAna'
+        },
+        content: 'Tênis nike em promoção! Só hoje por R$ 80,00. #promoção #tenis',
+        image: 'static/images/tenis.jpg',
+        price: 'R$ 80,00',
+        size: '40',
+        likes: 28,
+        comments: 3,
+        timestamp: '4h atrás',
+        liked: false
         }
     ];
     
