@@ -225,8 +225,6 @@ body {
 
 /* Main Content Styles */
 .main-content {
-    display: flex;
-    flex-direction: column;
     gap: 2.5rem;
 }
 

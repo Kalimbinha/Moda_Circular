@@ -11,29 +11,29 @@ const storiesContainer = document.querySelector('.stories');
 const stories = [
     {
         id: 1,
-        image: 'static/images/vid.mp4',
-        title: 'Nova Coleção',
+        image: 'static/images/pessoa_chao.jpg',
+        title: 'Nova Coleção!!',
         views: 120,
         duration: 5000
     },
     {
         id: 2,
-        image: 'static/images/ok.jpg',
-        title: 'Promoção do Dia',
+        image: 'static/images/estilo.jpg',
+        title: 'style',
         views: 85,
         duration: 5000
     },
     {
         id: 3,
-        image: 'static/images/D.webp',
+        image: 'static/images/sobretudo.jpg',
         title: 'Tendências',
         views: 150,
         duration: 5000
     },
     {
         id: 4,
-        image: 'static/images/OO.jpg',
-        title: 'Novidades',
+        image: 'static/images/garimpo.jpg',
+        title: 'Dia de garimpo!',
         views: 95,
         duration: 5000
     }

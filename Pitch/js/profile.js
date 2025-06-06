@@ -10,16 +10,16 @@ const photosGrid = document.querySelector('.photos-grid');
 const userPosts = [
     {
         id: 1,
-        content: 'Acabei de lançar meu novo projeto! 🚀 #coding #webdev',
-        image: '../static/images/ok.jpg',
+        content: 'Novo projeto em andamento! 🚀 #moda #style',
+        image: '../static/images/jeans_escrito.jpg',
         likes: 42,
         comments: 5,
         timestamp: '2h atrás'
     },
     {
         id: 2,
-        content: 'Dia perfeito para programar! ☕️ #coding #javascript',
-        image: '../static/images/D.webp',
+        content: 'model ☕️ #modelo #brecho',
+        image: '../static/images/modelo.jpg',
         likes: 28,
         comments: 3,
         timestamp: '4h atrás'
@@ -62,7 +62,7 @@ function loadUserPosts() {
             <div class="post-header">
                 <img src="../static/images/Cara_Perfil.jpg" alt="Profile" class="profile-pic">
                 <div>
-                    <h4>Nome do Usuário</h4>
+                    <h4>Brechó_jpeg</h4>
                     <span class="timestamp">${post.timestamp}</span>
                 </div>
             </div>
