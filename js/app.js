@@ -49,7 +49,7 @@ const posts = [
             username: '@brechodaAna'
         },
         content: 'Nova jaqueta jeans vintage disponível! Tamanho M. Aproveite! #brecho #moda #vintage',
-        image: 'static/images/jaqueta.jpg',
+        image: 'static/images/Jaqueta.jpg',
         price: 'R$ 59,90',
         size: 'M',
         likes: 42,
