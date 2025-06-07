@@ -369,7 +369,7 @@ function loadMorePosts() {
                 username: '@brecho_jpeg'
             },
             content: 'Novo estoque chegou! Venha conferir as novidades. #brecho #novidades',
-            image: 'static/images/novidades.jpg',
+            image: 'static/images/Novidades.jpg',
             price: 'R$ 0,00',
             size: 'não informado',
             likes: 15,
