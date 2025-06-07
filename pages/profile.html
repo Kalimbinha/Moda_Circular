@@ -15,27 +15,45 @@
             <a href="../index.html" class="brand">ReVeste</a>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar...">
+                <i class="fas fa-search search-icon"></i>
             </div>
             <div class="nav-menu">
                 <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Início</a>
                 <a href="#" class="nav-link"><i class="fas fa-bell"></i> Notificações</a>
-                <a href="#" class="nav-link"><i class="fas fa-envelope"></i> Mensagens</a>
-                <a href="profile.html" class="nav-link">
+                <a href="#" class="nav-link"><i class="fas fa-shopping-bag"></i> Carrinho</a>
+                <a href="profile.html" class="nav-link active">
                     <img src="../static/images/Cara_Perfil.jpg" alt="Profile" class="profile-pic">
                 </a>
             </div>
         </div>
     </nav>
+
     <div class="main-content">
         <div class="profile-container container">
             <div class="profile-header">
                 <div class="profile-avatar">
                     <img src="../static/images/Cara_Perfil.jpg" alt="Avatar" class="profile-pic">
+                    <button class="edit-profile-btn">
+                        <i class="fas fa-camera"></i>
+                    </button>
                 </div>
                 <div class="profile-info">
-                    <h2>Brechó_jpeg</h2>
-                    <span class="username">@brecho_jpeg</span>
-                    <p class="bio">Brechó Alternativo </p>
+                    <div class="profile-name-section">
+                        <h2>Brechó_jpeg</h2>
+                        <button class="edit-settings-btn">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                    <span class="username">brecho_jpeg</span>
+                    <p class="bio">Brechó Alternativo com peças exclusivas e sustentáveis. Moda consciente para quem ama estilo único.</p>
+                    <div class="profile-actions">
+                        <button class="action-btn primary">
+                            <i class="fas fa-store"></i> Minha Loja
+                        </button>
+                        <button class="action-btn secondary">
+                            <i class="fas fa-share-alt"></i> Compartilhar
+                        </button>
+                    </div>
                     <div class="profile-stats">
                         <div class="stat-item">
                             <div class="stat-value">42</div>
@@ -52,34 +70,84 @@
                     </div>
                 </div>
             </div>
+
             <div class="profile-tabs">
-                <button class="tab-btn active" data-tab="posts">Posts</button>
-                <button class="tab-btn" data-tab="photos">Fotos</button>
-                <button class="tab-btn" data-tab="about">Sobre</button>
+                <button class="tab-btn active" data-tab="posts">
+                    <i class="fas fa-th"></i> Posts
+                </button>
+                <button class="tab-btn" data-tab="photos">
+                    <i class="fas fa-images"></i> Fotos
+                </button>
+                <button class="tab-btn" data-tab="about">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </button>
             </div>
+
             <div class="tab-content active" id="posts">
                 <div class="posts-grid">
                     <!-- Posts do usuário serão carregados aqui -->
                 </div>
             </div>
+
             <div class="tab-content" id="photos">
                 <div class="photos-grid">
-                    <img src="../static/images/jeans_escrito.jpg" alt="Photo 1">
-                    <img src="../static/images/modelo.jpg" alt="Photo 2">
-                    <img src="../static/images/garimpo.jpg" alt="Photo 3">
+                    <div class="photo-item">
+                        <img src="../static/images/jeans_escrito.jpg" alt="Photo 1">
+                        <div class="photo-overlay">
+                            <button class="photo-action"><i class="fas fa-heart"></i></button>
+                            <button class="photo-action"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="../static/images/modelo.jpg" alt="Photo 2">
+                        <div class="photo-overlay">
+                            <button class="photo-action"><i class="fas fa-heart"></i></button>
+                            <button class="photo-action"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="../static/images/garimpo.jpg" alt="Photo 3">
+                        <div class="photo-overlay">
+                            <button class="photo-action"><i class="fas fa-heart"></i></button>
+                            <button class="photo-action"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="tab-content" id="about">
                 <div class="about-section">
-                    <h3>Informações Pessoais</h3>
-                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>São Paulo, Brasil</span></div>
-                    <div class="info-item"><i class="fas fa-briefcase"></i> <span>Artista independente </span></div>
-                    <div class="info-item"><i class="fas fa-graduation-cap"></i> <span>Produção em Multimídia</span></div>
-                    
+                    <div class="about-card">
+                        <h3><i class="fas fa-info-circle"></i> Informações Pessoais</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info-content">
+                                    <span class="info-label">Localização</span>
+                                    <span class="info-value">São Paulo, Brasil</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div class="info-content">
+                                    <span class="info-label">Profissão</span>
+                                    <span class="info-value">Artista independente</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="info-content">
+                                    <span class="info-label">Formação</span>
+                                    <span class="info-value">Produção em Multimídia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="../js/profile.js"></script>
 </body>
 </html> 
