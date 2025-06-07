@@ -1,5 +1,5 @@
 const routes = {
-    'feed': 'index..html',
+    'feed': 'index.html',
     'profile': 'pages/profile.html',
     'settings': 'pages/settings.html',
     'saved': 'pages/saved.html'
@@ -50,7 +50,7 @@ function handleSpaNavigation(e) {
     const link = e.target.closest('a');
     if (!link) return;
     const href = link.getAttribute('href');
-    if (href && (href.includes('profile.html') || href.includes('settings.html') || href.includes('index..html') || href.includes('saved.html'))) {
+    if (href && (href.includes('profile.html') || href.includes('settings.html') || href.includes('index.html') || href.includes('saved.html'))) {
         e.preventDefault();
         if (href.includes('profile')) loadPage('profile');
         else if (href.includes('settings')) loadPage('settings');
@@ -64,7 +64,7 @@ function handleSpaNavigation(e) {
 document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', handleSpaNavigation);
     window.addEventListener('popstate', (e) => {
-        const page = (e.state && e.state.page) || 'index..html';
+        const page = (e.state && e.state.page) || 'index.html';
         if (page.includes('profile')) loadPage('profile');
         else if (page.includes('settings')) loadPage('settings');
         else if (page.includes('saved')) loadPage('saved');
